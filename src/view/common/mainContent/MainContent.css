@@ -1,0 +1,11 @@
+.maincontent{
+    background-color: darkslateblue;
+    padding: 3px;
+
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    height: 400px;
+
+}
