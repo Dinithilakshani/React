@@ -3,8 +3,8 @@ export function NavBar() {
     return (
 
         <nav className="navbar-container">
-            <div className="navbar-logo">
-                <img src="/imges/img.png" alt="Company Logo"/>
+            <div id="logo">
+                <img src="src/assets/img-removebg-preview.png" alt="Company Logo"/>
             </div>
             <div className="navbar-links">
                 <div className="navbar-item active">Home</div>

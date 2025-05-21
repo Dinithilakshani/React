@@ -6,16 +6,16 @@ import './footer.css';
              <div className="footer-content">
                  <div className="footer-section about">
                      <div className="footer-logo">
-                         <img src="/images/img.png" alt="Company Logo" />
+                         <img src="src/assets/img-removebg-preview.png" alt="Company Logo" />
                      </div>
                      <p className="footer-description">
                          We provide innovative solutions to help businesses grow and succeed in today's digital landscape.
                      </p>
                      <div className="footer-social">
-                         <div className="social-icon"><i className="fa fa-facebook"> <img src="/images/img.png"/></i></div>
-                         <div className="social-icon"><i className="fa fa-twitter"></i></div>
-                         <div className="social-icon"><i className="fa fa-instagram"></i></div>
-                         <div className="social-icon"><i className="fa fa-linkedin"></i></div>
+                         <div className="social-icon"><i className="fa fa-facebook"> <img src="src/assets/img_1.png"/></i></div>
+                         <div className="social-icon"><i className="fa fa-twitter"><img src="src/assets/img_3.png"/></i></div>
+                         <div className="social-icon"><i className="fa fa-instagram"><img src="src/assets/img_4.png"/></i></div>
+                         <div className="social-icon"><i className="fa fa-linkedin"><img src="src/assets/img_2.png"/></i></div>
                      </div>
                  </div>
 
