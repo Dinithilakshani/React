@@ -76,7 +76,10 @@
         font-size: 0.9rem;
     }
 }
+.business-name{
 
+    color: white;
+}
 /* For very small screens */
 @media screen and (max-width: 480px) {
     .navbar-links {
