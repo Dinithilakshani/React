@@ -2,35 +2,35 @@
   {
     "id": 1,
     "name": "Bottle1",
-    "price": "2000",
+    "price": 2000,
     "currency": "LKR",
     "image": "img.png"
   },
   {
     "id": 2,
     "name": "Bottle2",
-    "price": "3000",
+    "price": 3000,
     "currency": "LKR",
     "image": "img_3.png"
   },
   {
     "id": 3,
     "name": "Bottle3",
-    "price": "2000",
+    "price": 2000,
     "currency": "LKR",
     "image": "img_2.png"
   },
   {
     "id": 4,
     "name": "Bottle4",
-    "price": "7000",
+    "price": 7000,
     "currency": "LKR",
     "image": "img_1.png"
   },
   {
     "id": 5,
     "name": "Bottle4",
-    "price": "7000",
+    "price": 7000,
     "currency": "LKR",
     "image": "img_1.png"
   }

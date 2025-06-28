@@ -1,15 +1,14 @@
-import {useState} from "react";
-import {ModifyCart} from "../ModifyCart/ModifyCart.tsx";
 
-type ProductData= {
-    id:number,
-    name: string,
-    price:string,
-    currency: string,
-    image: string
-}
-type productProps={
-    data:ProductData
+import {ModifyCart} from "../ModifyCart/ModifyCart.tsx";
+import type {ProductData} from "../../../model/ProductData.ts";
+import {useDispatch, useSelector} from "react-redux";
+import type {AppDispatch, RootState} from "../../../store/store.ts";
+import {addItemToCart} from "../../../slices/cartSlice.ts";
+
+
+
+type productProps = {
+    data: ProductData
 }
 const images: Record<string, string>= import.meta.glob('../../../assets/products/*',
     {eager:true, import:'default'});
@@ -18,11 +17,15 @@ export function Product( { data }: productProps) {
     //console.log(images)
     // console.log(`../../../assets/products/${data.image}`)
     const image =    images[`../../../assets/products/${data.image}`];
+
+    const dispath = useDispatch<AppDispatch>()
     console.log(image);
 
-    const [isActive,setIsActive]= useState(false);
+    //
+    const item = useSelector((state: RootState)=> state.cart.items.find((cartItem) => cartItem.product.id === data.id));
     const addToCart = ()=>{
-        setIsActive(true);
+        dispath(addItemToCart(data))
+
 
 
     }
@@ -32,7 +35,7 @@ export function Product( { data }: productProps) {
 
 
                 {/* Product 1 */}
-                <div className="w-32 h-52 bg-white border border-gray-500 p-2 flex flex-col items-center">
+                <div className="w-32 h-52 bg-white border border-gray-500 p-2 flex flex-col items-center hover:rotate-5 ">
                     <img className="h-[110px] w-[120px]" src={image } alt="Bottle" />
                     <div className="flex items-center mt-1">
                         <h3 className="text-black text-[16px]">
@@ -44,7 +47,7 @@ export function Product( { data }: productProps) {
                         </div>
                     </div>
                     {
-                        isActive ? (
+                        item ? (
                             <ModifyCart data={
                            {product:data }}/>
                         ): (

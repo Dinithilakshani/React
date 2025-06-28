@@ -22,6 +22,9 @@ export function NavBar() {
                     <Link className="text-white hover:text-blue-500 transition" to="/Contact">Contact</Link>
                 </li>
                 <li>
+                    <Link className="text-white hover:text-blue-500 transition" to="/shoppingCart">My Cart</Link>
+                </li>
+                <li>
                     <Link to="/Login">
                         <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
                             Sign In
