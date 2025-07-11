@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type {ProductData} from "../model/ProductData.ts";
+import {backendApi} from "../api.ts";
 
 
 // interface Product {
@@ -23,12 +24,15 @@ const initialState: ProductState = {
 export const getAllProduct = createAsyncThunk(
     "products/getAllProducts",
     async () => {
-        const response = await fetch("./product-data.json");
-        if (!response.ok) {
-            throw new Error("Failed to fetch products");
-        }
-        const jsonData = await response.json();
-        return jsonData;
+        // const response = await fetch("./product-data.json");
+        // if (!response.ok) {
+        //     throw new Error("Failed to fetch products");
+        // }
+        // const jsonData = await response.json();
+        // return jsonData;
+
+      const  response =  await  backendApi.get("/products/all")
+        return await response.data
     }
 );
 
